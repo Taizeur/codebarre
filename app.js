@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true })); // Parse les formulaires (ap
 // ===== SERVIR LES FICHIERS STATIQUES =====
 app.use(express.static(path.join(__dirname, "public"))); // Permet d'accéder à public/index.html
 // ===== CONNEXION À SQLITE =====
-const db = new sqlite3.Database("/tmp/carrefour.db", (err) => {
+const db = new sqlite3.Database("/data/carrefour.db", (err) => {
  if (err)
 console.error("Erreur connexion SQLite :", err.message); // Affiche erreur de connexion
  else
